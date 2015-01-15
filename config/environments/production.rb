@@ -89,6 +89,8 @@ config.action_mailer.default_url_options = { :host => 'http://jjt-firstapp.herok
       :bucket => ENV['AWS_BUCKET'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }  
+    },
+    :url =>':s3_domain_url',
+    :path => '/:class/:attachment/:id_partition/:style/:filename'
   }
 end
